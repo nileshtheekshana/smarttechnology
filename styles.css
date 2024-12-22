@@ -1,0 +1,251 @@
+@font-face {
+	font-family: 'SourceSansPro';
+	src: url('fonts/SourceSansPro-Regular.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'SourceSansPro';
+	src: url('fonts/SourceSansPro-Bold.otf') format('opentype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'SourceSansPro', sans-serif;
+	display: grid;
+	grid-template-rows: auto auto 1fr auto;
+	grid-template-columns: 1fr;
+	min-height: 100vh;
+}
+
+.prehead {
+	background-color: #f4f4f4;
+	text-align: left; 
+	font-size: 14px;
+	padding: 10px 20px;
+	display: flex; 
+	justify-content: space-between; 
+	align-items: center; 
+}
+
+.social-icons {
+	display: flex; 
+	gap: 10px; 
+}
+
+.social-icons img {
+	width: 20px; 
+	height: 20px;
+	cursor: pointer; 
+}
+
+header {
+	background-color: #E8EAF4;
+	display: grid;
+	grid-template-rows: auto auto;
+	gap: 10px;
+	padding: 20px;
+}
+
+.topheader {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	
+}
+
+.shopname {
+	text-align: left;
+	width: 100%; 
+}
+
+.shopname h1 {
+	color: #001887;
+	font-size: 36px; 
+}
+
+.navigationbar {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.navigationbar nav {
+	font-weight:bold;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.contact {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 10px;
+	font-size: 14px;
+}
+
+.proicon {
+	width: 40px;
+	height: 40px;
+	background-color: #001887;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.proicon img {
+	width: 20px;
+	height: 20px;
+}
+
+.bottomheader {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	align-items: center;
+	gap: 10px;
+}
+
+.selectbox {
+	position: relative;
+}
+
+.selectbtn {
+	background: #001887;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+	weight:100vh;
+}
+
+.selectitem {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background: white;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	width: 100%;
+}
+
+.selectbox:hover .selectitem {
+	display: block;
+}
+
+.selectitem a {
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	color: black;
+}
+
+.searchbar {
+	position: relative;
+}
+
+.searchinput {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 20px;
+	font-size: 14px;
+}
+
+.searchbutton {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	height: 100oh;
+	width: 50px;
+	transform: translateY(-50%);
+	background-color: black;
+	border: none;
+	cursor: pointer;
+	padding: 5px; 
+	border-radius: 5px;
+}
+
+.searchbutton img {
+	width: 20px; 
+	height: 20px;
+}
+
+.icons {
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+}
+
+.icon {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #F7F8F9;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.icon img {
+	width: 20px;
+	height: 20px;
+}
+
+main {
+	padding: 20px;
+	text-align: center;
+}
+
+footer {
+	background-color: #001887;
+	color: white;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 20px;
+	padding: 20px;
+}
+
+footer div {
+	font-size: 14px;
+}
+
+footer h3 {
+	margin-bottom: 10px;
+}
+
+footer ul {
+	list-style: none;
+	padding: 0;
+}
+
+footer li {
+	margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+	header, footer {
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+
+	.topheader, .bottomheader {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	.navigationbar {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
